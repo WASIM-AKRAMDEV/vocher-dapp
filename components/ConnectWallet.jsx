@@ -28,14 +28,18 @@ export default function ConnectWallet({ onWalletConnected }) {
 
   return (
     <div className=" flex justify-center items-center flex-col">
-    <Image src={"/images/6273066.jpg"}
-        width={200}
-        height={200}
-        sizes="100vw"
-        alt="wallet image"
-    />
-        
-  
+      {walletAddress ? (
+        ""
+      ) : (
+        <Image
+          src={"/images/6273066.jpg"}
+          width={200}
+          height={200}
+          sizes="100vw"
+          alt="wallet image"
+        />
+      )}
+
       <button
         onClick={connectWallet}
         className="bg-blue-500 text-white px-4 py-2 rounded"
